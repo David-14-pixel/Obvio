@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="dashboard :: head">
+
+</head>
+<body>
+<header th:replace="dashboard :: header"></header>
+
+	<main class="pt-5 mx-lg-5">
+	<div class="container-fluid mt-5">
+	<form th:action="@{/sumar}" method="get" >
+                <div>
+                <label>Desde</label>
+                 <input type="date" name="desde" />
+                 <label>Hasta</label>
+                 <input type="date" name="hasta"  />
+                 </div>
+
+                 <button type="submit">Buscar</button>
+                 </form>
+                 
+                 
+                 <br>
+                 <br>
+                 <p th:if="${sumarle!=null}" th:text="${sumarle}"></p>
+                 </div>
+                 </main>
+</body>
+</html>

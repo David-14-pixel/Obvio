@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="dashboard :: head">
+
+</head>
+<body>
+<header th:replace="dashboard :: header"></header>
+<main class="pt-5 mx-lg-5 w-50">
+	<div class="container-fluid mt-5">
+<form th:action="@{/contacto/enviar}" method="post">
+<label for="Correo">Correo</label>
+<input type="text" name="correo" id="correo" class="form-control">
+<label for="Asunto">Asunto</label>
+<input type="text" name="asunto" id="asunto" class="form-control">
+<label for="Mensaje">Mensaje</label>
+<textarea rows="" cols="" name="mensaje" class="form-control"></textarea>
+<br>
+<button type="submit" name="enviar" class="btn btn-primary btn-block">Enviar</button>
+</form>
+
+</div>
+</main>
+</body>
+</html>
